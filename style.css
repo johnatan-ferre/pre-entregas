@@ -206,6 +206,39 @@ body {
     align-items: center;
 }
 /*  Fin pagina lugares */
+.img-hija {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.video-inyectado iframe {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+}
+
+.carousel-inner h5 {
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.map-actividad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.map-actividad iframe {
+    margin-top: 6em;
+}
+
+
 
 
 
@@ -275,6 +308,7 @@ body {
     .elemento-enlaces p {
         display: none;
     }
+
     
 }
 
