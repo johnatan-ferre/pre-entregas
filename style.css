@@ -18,12 +18,38 @@ body {
     background-color: azure;
 }
 
-
+/* .nav-1 {
+    background-color: gray;
+} */
 
 .logo {
     width: 3em;
     height: 3em;
+
+    transition: all 400ms ease-out;
+    animation-name: anim-logo;
+    animation-duration: 2000ms;
 }
+
+.logo:hover {
+    transform: scale(1.25);
+}
+
+@keyframes anim-logo {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
 
 .bg-propio {
     background-color: #B9F4C9;
@@ -40,7 +66,7 @@ body {
 
 
 /* Textos */
-.subtitulos{ 
+.subtitulos{
     margin: .5em auto;
     text-align: center;
     font-size: 2.125em;
@@ -57,7 +83,38 @@ body {
     margin: .5em auto;
     line-height: 1.4em;
     word-spacing: 0.06em;
-    width: 78%;
+    width: 80%;
+}
+
+.parrafo::selection {
+    background-color: #3F913B;
+    color: #B9F4C9;
+}
+
+.linea-inicio {
+    width: 80%;
+    border-right: 2px solid rgba(240, 255, 255, .75);
+    white-space: normal;
+    overflow: hidden;
+    transform: translateY(.1%);
+
+}
+
+.texto-animado {
+    animation: escritura 750ms;
+}
+
+@keyframes escritura {
+    from {
+        width: 0;
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+
+    to {
+        width: 80%;
+        border-right-color: transparent;
+    }
+
 }
 
 .contenedor-enlaces {
@@ -96,7 +153,7 @@ body {
     grid-template-rows: auto auto auto;
     grid-template-columns: 1fr;
 
-    grid-template-areas: 
+    grid-template-areas:
     'header'
     'centro'
     'footer';
@@ -156,7 +213,7 @@ body {
     opacity: 0;
     transition: opacity 0.6s;
 
-    
+
 }
 .contenedor-lugar {
     line-height: 0;
@@ -286,7 +343,7 @@ body {
         'h';
     }
 
-    
+
     .contenedor-secundario {
         width: 90%;
         margin: auto;
@@ -309,7 +366,7 @@ body {
         display: none;
     }
 
-    
+
 }
 
 @media only screen and (max-width: 480px){
